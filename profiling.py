@@ -3,10 +3,7 @@ from importlib import import_module
 import pkgutil
 import time
 
-
 f = file('output.txt', 'w')
-
-
 
 def aop(func):
     def wrapper(*args, **kwds):
@@ -25,9 +22,6 @@ def aop(func):
         print "==========================="
         return value
     return wrapper
-
-
-
 
 def makePath(list):
     str=''
@@ -59,11 +53,6 @@ def aopp(pkname,ppkname):
                     setattr(m,attr, aop(item))
 
 
-
-
 aopp('neo','')
-
-
 aopp('neolib','')
-
 aopp('neoapp','')
